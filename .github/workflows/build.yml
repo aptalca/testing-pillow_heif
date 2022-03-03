@@ -24,4 +24,4 @@ jobs:
 
       - name: Build pillow_heif
         run: |
-          docker build --platform ${{ matrix.arch }} .
+          docker buildx build --platform ${{ matrix.arch }} .
