@@ -17,5 +17,5 @@ RUN \
     lcms2-dev \
     openjpeg-dev && \
   python3 -m pip install --upgrade pip && \
-#  pip install -v --no-binary :all: pillow_heif && \
+  pip install -v --no-binary :all: pillow_heif && \
   echo "**** Done ****"
