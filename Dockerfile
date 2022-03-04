@@ -19,7 +19,6 @@ RUN \
     aom aom-dev \
     openjpeg-dev && \
   python3 -m pip install --upgrade pip pytest && \
-  ls -ls . && \
   git clone https://github.com/bigcat88/pillow_heif.git && \
   python3 -m pip install install -v pillow_heif/. && \
   echo "**** Build Done ****" && \
