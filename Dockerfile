@@ -2,7 +2,7 @@ FROM alpine:3.14
 
 COPY . /pillow_heif
 
-RUN \
+RUN set ex && \
   apk add --no-cache \
     py3-pip \
     python3-dev \
@@ -19,8 +19,4 @@ RUN \
     lcms2-dev \
     aom aom-dev \
     openjpeg-dev && \
-  python3 -m pip install --upgrade pip pytest && \
-  python3 -m pip install install -v pillow_heif/. && \
-  echo "**** Build Done ****" && \
-  pytest -s pillow_heif && \
-  echo "**** Test Done ****"
+  python3 -c "import platform; print(platform.machine())"
